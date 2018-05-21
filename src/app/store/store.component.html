@@ -2,8 +2,15 @@
   <a href="" class="navbar-brand">SPORTS STORE</a>
 </div>
 
-<div class="col-xs-3 bg-info p-a-1">
-  Categories: {{categories.length}}
+<div class="col-xs-3 p-a-1">
+  <button class="btn btn-block btn-outline-primary" (click)="changeCategory()">
+    Home
+  </button>
+  <button *ngFor="let category of categories" class="btn btn-block btn-outline-primary"
+    [class.active]="category == selectedCategory"
+    (click)="changeCategory(category)">
+    {{category}}
+  </button>
 </div>
 <div class="col-xs-9 p-a-1">
   <div *ngFor="let product of products" class="card card-outline-primary">
