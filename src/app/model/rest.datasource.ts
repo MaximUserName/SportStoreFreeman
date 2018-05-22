@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
-import { Http, RequestMethod } from "@angular/http";
+import { Http, Request, RequestMethod } from "@angular/http";
 import { Product } from "./product.model";
 import { Order } from "./order.model";
 import { Observable } from "rxjs/Observable";
+import "rxjs/add/operator/map";
 
 const PROTOCOL = "http";
 const PORT = 3500;
