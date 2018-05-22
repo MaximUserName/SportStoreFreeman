@@ -8,6 +8,8 @@ import { CartSummaryComponent } from "./cartSummary.component";
 import { CartDetailComponent } from "./cartDetail.component";
 import { CheckoutComponent } from "./checkout.component";
 import { RouterModule } from "@angular/router";
+import { OrderRepository } from "../model/order.repository";
+import { Order } from "../model/order.model";
 
 @NgModule({
     imports: [ModelModule, BrowserModule, FormsModule, RouterModule],
@@ -18,6 +20,7 @@ import { RouterModule } from "@angular/router";
         CartDetailComponent,
         CheckoutComponent
     ],
+    providers: [OrderRepository, Order],
     exports: [StoreComponent]
 })
 export class StoreModule { }
