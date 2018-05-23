@@ -24,7 +24,7 @@ import { AuthComponent } from "./admin/auth.component";
             },
             { path: "**", redirectTo: "/store" }
         ], {
-            enableTracing: true
+            enableTracing: false,
         })
     ],
     providers: [StoreFirstGuard],
