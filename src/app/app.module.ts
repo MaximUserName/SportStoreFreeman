@@ -7,6 +7,7 @@ import { StoreComponent } from "./store/store.component";
 import { CartDetailComponent } from "./store/cartDetail.component";
 import { CheckoutComponent } from "./store/checkout.component";
 import { StoreFirstGuard } from "./store-first.guard";
+import { AuthComponent } from "./admin/auth.component";
 
 @NgModule({
     imports: [
@@ -22,7 +23,9 @@ import { StoreFirstGuard } from "./store-first.guard";
                 canActivate: [StoreFirstGuard]
             },
             { path: "**", redirectTo: "/store" }
-        ])
+        ], {
+            enableTracing: true
+        })
     ],
     providers: [StoreFirstGuard],
     declarations: [AppComponent],
