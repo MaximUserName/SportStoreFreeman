@@ -8,8 +8,6 @@ import { CartDetailComponent } from "./store/cartDetail.component";
 import { CheckoutComponent } from "./store/checkout.component";
 import { StoreFirstGuard } from "./store-first.guard";
 import { AuthComponent } from "./admin/auth.component";
-import { ProductEditorComponent } from './admin/product-editor.component';
-import { OrderTableComponent } from './admin/order-table.component';
 
 @NgModule({
     imports: [
@@ -30,7 +28,7 @@ import { OrderTableComponent } from './admin/order-table.component';
         })
     ],
     providers: [StoreFirstGuard],
-    declarations: [AppComponent, ProductEditorComponent, OrderTableComponent],
+    declarations: [AppComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
