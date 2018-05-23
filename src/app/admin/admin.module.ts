@@ -4,6 +4,7 @@ import { AuthComponent } from './auth.component';
 import { AdminComponent } from './admin.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AuthGuard } from '../model/auth.guard';
 
 @NgModule({
   imports: [
@@ -11,10 +12,11 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule.forChild([
       { path: "auth", component: AuthComponent },
-      { path: "main", component: AdminComponent },
+      { path: "main", component: AdminComponent, canActivate: [AuthGuard] },
       { path: "**", redirectTo: "auth"}
     ])
   ],
-  declarations: [AuthComponent, AdminComponent]
+  declarations: [AuthComponent, AdminComponent],
+  providers: [AuthGuard]
 })
 export class AdminModule { }
