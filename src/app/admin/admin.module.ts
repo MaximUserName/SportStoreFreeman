@@ -5,6 +5,7 @@ import { AdminComponent } from './admin.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AuthGuard } from '../model/auth.guard';
+import { ProductTableComponent } from './product-table.component';
 
 @NgModule({
   imports: [
@@ -13,10 +14,13 @@ import { AuthGuard } from '../model/auth.guard';
     RouterModule.forChild([
       { path: "auth", component: AuthComponent },
       { path: "main", component: AdminComponent, canActivate: [AuthGuard] },
+      { path: "main/products", component: AdminComponent, canActivate: [AuthGuard] },
       { path: "**", redirectTo: "auth"}
     ])
   ],
-  declarations: [AuthComponent, AdminComponent],
+  declarations: [AuthComponent, AdminComponent,
+    ProductTableComponent
+  ],
   providers: [AuthGuard]
 })
 export class AdminModule { }
