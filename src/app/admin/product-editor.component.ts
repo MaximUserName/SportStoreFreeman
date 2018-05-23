@@ -11,7 +11,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ProductEditorComponent {
 
-  private editing: boolean = false;
+  editing: boolean = false;
   product: Product = new Product();
 
   constructor(private repository: ProductRepository,
