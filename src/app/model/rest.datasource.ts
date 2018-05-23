@@ -17,15 +17,30 @@ export class RestDataSource {
     }
 
     getProducts(): Observable<Product[]> {
-        return this.sendRequest(RequestMethod.Get, "products");
+        // return this.sendRequest(RequestMethod.Get, "products");
+        return this.http.request(new Request({
+            method: RequestMethod.Get,
+            url: this.baseUrl + "products",
+            body: null
+        })).map(response => response.json())
     }
 
     getOrders(): Observable<Order[]> {
-        return this.sendRequest(RequestMethod.Get, "orders");
+        // return this.sendRequest(RequestMethod.Get, "orders");
+        return this.http.request(new Request({
+            method: RequestMethod.Get,
+            url: this.baseUrl + "orders",
+            body: null
+        })).map(response => response.json())
     }
 
     saveOrder(order: Order): Observable<Order> {
-        return this.sendRequest(RequestMethod.Post, "orders", order);
+        // return this.sendRequest(RequestMethod.Post, "orders", order);
+        return this.http.request(new Request({
+            method: RequestMethod.Post,
+            url: this.baseUrl + "orders",
+            body: order
+        })).map(response => response.json())
     }
 
     private sendRequest(verb: RequestMethod,
