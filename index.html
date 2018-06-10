@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular</title>
+    <meta charset="utf-8" />
+
+    <!-- http://regexstorm.net/tester
+
+    C:\\work\\tempstudy_source\\MyStoreAngularFreemanBook\\SportsStore\\(?<src>.+)
+
+    <script src="${src}"></script> 
+
+    Flag: Multiline
+
+    -->
+
+    
+
+    <!-- C:\work\tempstudy_source\MyStoreAngularFreemanBook\SportsStore\node_modules\classlist.js\classList.min.js
+    C:\work\tempstudy_source\MyStoreAngularFreemanBook\SportsStore\node_modules\core-js\client\shim.min.js
+    C:\work\tempstudy_source\MyStoreAngularFreemanBook\SportsStore\node_modules\zone.js\dist\zone.min.js
+    C:\work\tempstudy_source\MyStoreAngularFreemanBook\SportsStore\node_modules\reflect-metadata\Reflect.js
+    C:\work\tempstudy_source\MyStoreAngularFreemanBook\SportsStore\node_modules\systemjs\dist\system.src.js -->
+
+    <script src="node_modules/classlist.js/classList.min.js"></script>
+<script src="node_modules/core-js/client/shim.min.js"></script>
+<script src="node_modules/zone.js/dist/zone.min.js"></script>
+<script src="node_modules/reflect-metadata/Reflect.js"></script>
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+<script src="systemjs.config.js"></script>
+<script>
+System.import("app/main").catch(function(err){ console.error(err); });
+</script>
+<link href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+rel="stylesheet" />
+</head>
+<body class="m-a-1">
+        <app></app>
+        </body>
+</html>
